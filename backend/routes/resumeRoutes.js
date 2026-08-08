@@ -1,0 +1,17 @@
+import { Router } from 'express';
+import upload from '../middleware/upload.js';
+import { protect } from '../middleware/auth.js';
+import { validate } from '../middleware/validate.js';
+import { analyze, analyzeValidation, deleteAnalysis, editorValidation, getResume, history, idValidation, improveSection, improveValidation, rewrite, rewriteValidation, saveEditor, uploadResume } from '../controllers/resumeController.js';
+const router = Router();
+router.use(protect);
+router.post('/upload', upload.single('resume'), uploadResume);
+router.post('/analyze', analyzeValidation, validate, analyze);
+router.post('/reanalyze', analyzeValidation, validate, analyze);
+router.post('/improve', improveValidation, validate, improveSection);
+router.post('/rewrite', rewriteValidation, validate, rewrite);
+router.post('/editor/save', editorValidation, validate, saveEditor);
+router.get('/history', history);
+router.get('/:id', idValidation, validate, getResume);
+router.delete('/:id', idValidation, validate, deleteAnalysis);
+export default router;

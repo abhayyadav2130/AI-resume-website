@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Review — AI Resume Rater</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-glow glow-one"></div>
+    <div class="page-glow glow-two"></div>
+    <header class="site-header">
+      <a class="brand" href="#"><span class="brand-mark">R</span>resume<span>review</span></a>
+      <nav><a href="#how-it-works">How it works</a><a href="#features">Features</a></nav>
+      <a class="header-link" href="#upload">Rate my resume <span>↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero" id="upload">
+        <div class="eyebrow"><span class="spark">✦</span> AI-POWERED RESUME ANALYSIS</div>
+        <h1>Turn your resume into<br /><em>your next opportunity.</em></h1>
+        <p class="hero-copy">Upload your resume and get a clear, actionable review in seconds. Find the small changes that can make a big difference.</p>
+
+        <div class="upload-card" id="uploadCard">
+          <div class="upload-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m0 0L7.5 7.5M12 3l4.5 4.5M5 14.5v4.25A2.25 2.25 0 0 0 7.25 21h9.5A2.25 2.25 0 0 0 19 18.75V14.5"/></svg></div>
+          <div class="upload-text"><strong>Drop your resume here</strong><span>or <button type="button" id="browseButton">browse files</button> from your computer</span></div>
+          <div class="file-pill">PDF / DOCX · max 5 MB</div>
+          <input type="file" id="fileInput" accept="application/pdf,.pdf,.docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden />
+        </div>
+        <p class="secure-note"><span>⌁</span> Your resume is private and securely processed.</p>
+      </section>
+
+      <section class="results" id="results" aria-live="polite">
+        <div class="results-heading"><div><div class="eyebrow"><span class="spark">✦</span> YOUR RESUME REPORT</div><h2>Here’s where you <em>stand.</em></h2></div><button class="new-review" id="newReview">Review another resume <span>↗</span></button></div>
+        <div class="report-grid">
+          <article class="score-card">
+            <span class="card-label">OVERALL SCORE</span>
+            <div class="score-wrap"><svg class="score-ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50"/><circle class="ring-value" cx="60" cy="60" r="50"/></svg><div class="score-number"><strong>82</strong><span>/100</span></div></div>
+            <p>You're ahead of <strong>74%</strong> of applicants in your field.</p>
+            <div class="score-tag">Strong foundation</div>
+          </article>
+          <article class="analysis-card"><div class="card-top"><div><span class="card-label">QUICK ANALYSIS</span><h3>Great start, a few ways to shine brighter.</h3></div><span class="status-dot"></span></div><div class="meter-row"><span>Impact &amp; achievements</span><div class="meter"><i style="width: 88%"></i></div><b>88</b></div><div class="meter-row"><span>Keywords &amp; skills</span><div class="meter"><i style="width: 76%"></i></div><b>76</b></div><div class="meter-row"><span>Clarity &amp; formatting</span><div class="meter"><i style="width: 82%"></i></div><b>82</b></div></article>
+        </div>
+        <div class="tips-title"><span>✦</span><div><span class="card-label">PERSONALIZED FEEDBACK</span><h2>Make these changes <em>first.</em></h2></div></div>
+        <div class="tips-grid">
+          <article class="tip"><span class="tip-number">01</span><h3>Lead with measurable impact</h3><p>Add numbers to two more experience bullets. Specific outcomes help your work stand out quickly.</p><a href="#">See example <span>→</span></a></article>
+          <article class="tip"><span class="tip-number">02</span><h3>Strengthen your skills section</h3><p>Add 3 role-specific keywords to help your resume pass applicant tracking systems.</p><a href="#">View suggested skills <span>→</span></a></article>
+          <article class="tip accent"><span class="tip-number">03</span><h3>Your biggest opportunity</h3><p>Your summary is clear. Tailor it to the role you're applying for to make an immediate connection.</p><a href="#">Improve my summary <span>→</span></a></article>
+        </div>
+      </section>
+
+      <section class="how" id="how-it-works"><div><span class="eyebrow"><span class="spark">✦</span> SIMPLE BY DESIGN</span><h2>A better resume<br />starts with <em>clarity.</em></h2></div><div class="steps"><p><b>01</b> Upload your PDF resume</p><p><b>02</b> We analyze what recruiters see</p><p><b>03</b> Get practical feedback to improve it</p></div></section>
+    </main>
+    <footer><a class="brand" href="#"><span class="brand-mark">R</span>resume<span>review</span></a><span>© 2025 Resume Review. Built for your next move.</span><span>Made with focus <b>✦</b></span></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
